@@ -1,0 +1,24 @@
+/* pages/index/index.wxss */
+.box{
+  width:100%;
+  text-align: center;
+}
+
+.game-box{
+  width:100%;
+  border: #000 solid 1rpx;
+  margin:10rpx auto;
+}
+
+.square-box{
+  border:#000 solid 1rpx;
+  float:left;
+  font-size: 100rpx;
+}
+
+.btn-box{
+  margin-top: 30rpx;
+}
+.btns{
+  margin-left: 20rpx;
+}

@@ -1,0 +1,31 @@
+<view class="box">
+{{isMaxScore}}
+  <text class="subtitle">拼图</text>
+  <view class="game-box" style="height:{{mediaWidth}}px;width:{{mediaWidth}}px;">
+    <view class="square-box" bindtap='clickSquare' data-id="0" style="height:{{boxWidth}}px;width:{{boxWidth}}px;line-height:{{boxWidth}}px">{{nums[0] === 0 ? '' : nums[0]}}</view>
+    <view class="square-box" bindtap='clickSquare' data-id="1" style="height:{{boxWidth}}px;width:{{boxWidth}}px;line-height:{{boxWidth}}px">{{nums[1] === 0 ? '' : nums[1]}}</view>
+    <view class="square-box" bindtap='clickSquare' data-id="2" style="height:{{boxWidth}}px;width:{{boxWidth}}px;line-height:{{boxWidth}}px">{{nums[2] === 0 ? '' : nums[2]}}</view>
+    <view class="square-box" bindtap='clickSquare' data-id="3" style="height:{{boxWidth}}px;width:{{boxWidth}}px;line-height:{{boxWidth}}px">{{nums[3] === 0 ? '' : nums[3]}}</view>
+    <view class="square-box" bindtap='clickSquare' data-id="4" style="height:{{boxWidth}}px;width:{{boxWidth}}px;line-height:{{boxWidth}}px">{{nums[4] === 0 ? '' : nums[4]}}</view>
+    <view class="square-box" bindtap='clickSquare' data-id="5" style="height:{{boxWidth}}px;width:{{boxWidth}}px;line-height:{{boxWidth}}px">{{nums[5] === 0 ? '' : nums[5]}}</view>
+    <view class="square-box" bindtap='clickSquare' data-id="6" style="height:{{boxWidth}}px;width:{{boxWidth}}px;line-height:{{boxWidth}}px">{{nums[6] === 0 ? '' : nums[6]}}</view>
+    <view class="square-box" bindtap='clickSquare' data-id="7" style="height:{{boxWidth}}px;width:{{boxWidth}}px;line-height:{{boxWidth}}px">{{nums[7] === 0 ? '' : nums[7]}}</view>
+    <view class="square-box" bindtap='clickSquare' data-id="8" style="height:{{boxWidth}}px;width:{{boxWidth}}px;line-height:{{boxWidth}}px">{{nums[8] === 0 ? '' : nums[8]}}</view>
+  </view>
+  <text>用时：{{showTime}} 秒</text>
+  <view class="btn-box">
+    <button size='mini' bindtap='startGame' class="btns" type="primary">开始</button>
+    <button size='mini' bindtap='endGame' class="btns" type="warn">放弃</button>
+  </view>
+  用户名{{userName}}
+  <button open-type='getUserInfo'>获取信息</button>
+  <modal class="modal" hidden="{{modalFlag}}" bindconfirm="modalOk" bindcancel="modalCancel" confirmText="再来一把" showCancel="{{true}}" cancelText="不玩了">
+    <view class="dew">
+      <view class="po_w">
+        <view wx:if="{{isMaxScore}}">创新纪录啦！！！</view>
+        <view>本次成绩{{showTime}}</view>
+        <view>历史最高分{{maxScore}}</view>
+      </view>
+    </view>
+  </modal>
+</view>
